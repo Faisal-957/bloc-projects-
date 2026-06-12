@@ -1,6 +1,7 @@
 import 'package:bloc_state_managemnet/noteaap/noteapp_event.dart';
 import 'package:bloc_state_managemnet/noteaap/noteapp_state.dart';
 import 'package:bloc_state_managemnet/noteaap/notemodel.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NoteappBloc extends Bloc<NoteappEvent, NoteappState> {
