@@ -14,4 +14,6 @@ class AuthService {
       password: password,
     );
   }
+
+  Future<void> logout() async {}
 }

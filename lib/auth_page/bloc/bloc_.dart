@@ -12,7 +12,7 @@ class Authbloc extends Bloc<Authevent, AuthState> {
         await authService.login(event.email, event.password);
         emit(AuthSuccess());
       } catch (e) {
-        emit(AuthFailure(e.toString()));
+        emit(AuthFailure("Invalid email or password"));
       }
     });
 
@@ -22,7 +22,7 @@ class Authbloc extends Bloc<Authevent, AuthState> {
         await authService.signup(event.email, event.password);
         emit(AuthSuccess());
       } catch (e) {
-        emit(AuthFailure(e.toString()));
+        emit(AuthFailure("Something went wrong"));
       }
     });
   }
